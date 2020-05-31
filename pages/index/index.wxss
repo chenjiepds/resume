@@ -1,21 +1,177 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.photo {
+  display: block;
+  width: 100%;
+  /* margin: 0 auto; */
+  /* border-radius: 50%; */
+  position: fixed;
+  bottom: 0;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.cover-info {
+  position: absolute;
+  top: 30rpx;
+  left: 50rpx;
+}
+.cover-name {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+}
+.cover-spell {
+  display: block;
+  font-size: 20px;
+}
+.big-circle {
+  background-color: rgba(0, 165, 34, 0.7);
+  width: 460rpx;
+  height: 460rpx;
   border-radius: 50%;
+  position: absolute;
+  left: -280rpx;
+  top: 230rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.medium-circle {
+  background: rgba(0, 165, 34, 0.7);
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -180rpx;
+  top: 150rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.small-circle {
+  background: rgba(0, 165, 34, 0.7);
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: -10rpx;
+  bottom: 110rpx;
 }
+
+.cover-work {
+  position: absolute;
+  bottom: 200rpx;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20rxp 0;
+  width: 100%;
+}
+
+.cover-job {
+  display: block;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+}
+.cover-exp {
+  font-size: 20px;
+  color: #FFF;
+  display: block;
+}
+.navigation {
+  position: absolute;
+  top: 40rpx;
+  right: 20rpx;
+}
+.navigation::after {
+  content: '\009B';
+  width: 20rpx;
+  height: 20rpx;
+  font-size: 30px;
+  margin-left: 8rpx;
+  color: #333;
+}
+
+ /* 简历页 */
+
+ .resume {
+   margin: 0 20rpx;
+ }
+ .section {
+   padding-bottom: 30rpx;
+ }
+ .section-info {
+   display: flex;
+   align-items: center;
+   border-bottom: 1rpx solid #333;
+   padding-bottom: 5rpx;
+   margin: 10rpx 0;
+ }
+ .section-seq {
+   background: #444;
+   width: 45rpx;
+   height: 45rpx;
+   color: #FFF;
+   text-align: center;
+   line-height: 45rpx;
+   margin-right: 10rpx;
+   font-weight: bold;
+ }
+ .section-title {
+   font-size: 20px;
+ }
+
+ .column {
+   font-size: 14px;
+   border-bottom: dashed 1rpx #333;
+   padding: 18rpx 0rpx;
+ }
+ .col-2 {
+   column-count: 2;
+ }
+ .col-1 {
+   column-count: 1;
+ }
+ .info{
+   display: block;
+ }
+ .skill {
+   padding: 8rpx 0rpx;
+ }
+ .skill-name {
+   font-size: 14px;
+   display: block;
+   margin-bottom: 5rpx;
+ }
+ .education {
+   border-bottom: dashed 1rpx #999;
+   padding: 15rpx 0rpx;
+ }
+ .education:last-of-type {
+   border-bottom: none;
+ }
+ .school {
+   font-size: 16px;
+ }
+ .icon-school {
+   width: 40rpx;
+   height: 40rpx;
+   vertical-align: -5rpx;
+   margin-right: 8rpx;
+ }
+ .row {
+   display: flex;
+   justify-content: space-between;
+ }
+ .info {
+   font-size: 14px;
+   margin-top: 6rpx;
+   display: flex;
+   align-items: center;
+ }
+ .icon {
+   width: 30rpx;
+   height: 30rpx;
+   margin-right: 8rpx;
+ }
+
+ .page {
+   display: block;
+   width: 100%;
+   text-align: center;
+   font-size: 14px;
+ }

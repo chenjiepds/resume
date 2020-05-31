@@ -1,13 +1,77 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<swiper style="height: {{vHeight}}px">
+  <!-- <swiper-item>
+   <image src="../../assest/images/self.JPG" mode="widthFix" class="photo"></image>
+   <view class="cover-info">
+      <text class="cover-name">{{name}}</text>
+      <text class="cover-spell">{{spell}}</text>
+   </view>
+   <view class="big-circle"></view>
+   <view class="medium-circle"></view>
+   <view class="small-circle"></view>
+   <view class="cover-work">
+    <text class="cover-job">{{job}}</text>
+    <text class="cover-exp">{{exp}}</text>
+   </view>
+   <view class="navigation">我的简历</view>
+  </swiper-item> -->
+  <swiper-item>
+    <scroll-view scroll-y="true" style="width: 100%; height:{{vHeight}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">1</view>
+            <text class="section-title">基本资料</text>
+          </view>
+          <view class="column col-2">
+            <text class="info">姓名：{{name}}</text>
+            <text class="info">电话：{{telphone}}</text>
+          </view>
+          <view class="column col-2">
+            <text class="info">性别：{{sex}}</text>
+            <text class="info">年龄：{{age}}</text>
+          </view>
+          <view class="column col-1">
+            <text class="info">邮箱：{{email}}</text>
+          </view>
+          <view class="column col-1">
+            <text class="info">住址：{{address}}</text>
+          </view>
+        </view>
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">2</view>
+            <text class="section-title">主要技能</text>
+          </view>
+          <view class="skill" wx:for="{{skills}}" wx:key="id">
+            <text class="skill-name">{{item.name}}</text>
+            <progress class="progress" percent="{{item.percent}}" stroke-width="5" active duration="10" border-radius="10"></progress>
+          </view>
+        </view>
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">3</view>
+            <text class="section-title">教育经历</text>
+          </view>
+          <view class="education" wx:for="{{education}}" wx:key="id">
+            <view class="school">
+              <image class="icon-school" src="../../assest/images/school-icon.svg"></image>
+              <text>{{item.school}}</text>
+            </view>
+            <view class="row">
+              <view class="info">
+                <image class="icon" src="../../assest/images/icon-book.svg"></image>
+                <text>{{item.major}}</text>
+              </view>
+              <view class="info">
+                <image class="icon" src="../../assest/images/icon-calendar.svg"></image>
+                <text>{{item.year}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <text class="page">1/4</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

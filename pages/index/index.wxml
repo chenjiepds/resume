@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <swiper style="height: {{vHeight}}px">
-  <!-- <swiper-item>
-   <image src="../../assest/images/self.JPG" mode="widthFix" class="photo"></image>
+  <swiper-item>
+   <image src="../../assest/images/self.png" mode="widthFix" class="photo"></image>
    <view class="cover-info">
       <text class="cover-name">{{name}}</text>
       <text class="cover-spell">{{spell}}</text>
@@ -14,7 +14,8 @@
     <text class="cover-exp">{{exp}}</text>
    </view>
    <view class="navigation">我的简历</view>
-  </swiper-item> -->
+  </swiper-item>
+
   <swiper-item>
     <scroll-view scroll-y="true" style="width: 100%; height:{{vHeight}}px">
       <view class="resume">
@@ -70,8 +71,77 @@
             </view>
           </view>
         </view>
+        <rich-text class="desc">{{item.desc}}</rich-text>
         <text class="page">1/4</text>
       </view>
     </scroll-view>
   </swiper-item>
+
+  <swiper-item>
+     <scroll-view scroll-y="true" style="width: 100%; height:{{vHeight}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">4</view>
+            <text class="section-title">工作经历</text>
+          </view>
+          <view class="work" wx:for="{{work}}" wx:key="id">
+            <view class="company">
+              <image class="icon-school" src="../../assest/images/icon-company.svg"></image>
+              <text>{{item.company}}</text>
+            </view>
+            <view class="row">
+              <view class="info">
+                <image class="icon" src="../../assest/images/icon-job.svg"></image>
+                <text>{{item.job}}</text>
+              </view>
+              <view class="info">
+                <image class="icon" src="../../assest/images/icon-calendar.svg"></image>
+                <text>{{item.year}}</text>
+              </view>
+            </view>
+              <rich-text class="desc">{{item.desc}}</rich-text>
+          </view>
+        </view>
+        <text class="page">2/4</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+   <swiper-item>
+     <scroll-view scroll-y="true" style="width: 100%; height:{{vHeight}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">5</view>
+            <text class="section-title">项目经历</text>
+          </view>
+          <view class="project" wx:for="{{project}}" wx:key="id">
+            <view class="company">
+              <image class="icon-school" src="../../assest/images/icon-company.svg"></image>
+              <text>{{item.name}}</text>
+            </view>
+              <rich-text class="desc">{{item.desc}}</rich-text>
+          </view>
+        </view>
+        <text class="page">3/4</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+     <scroll-view scroll-y="true" style="width: 100%; height:{{vHeight}}px">
+      <view class="resume">
+        <view class="section">
+          <view class="section-info">
+            <view class="section-seq">6</view>
+            <text class="section-title">自我评价</text>
+          </view>
+        </view>
+        <rich-text class="desc">{{introduction}}</rich-text>
+        <text class="page">4/4</text>
+        </view>
+    </scroll-view>
+  </swiper-item>
+
 </swiper>

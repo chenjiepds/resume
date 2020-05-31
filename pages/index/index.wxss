@@ -137,14 +137,14 @@
    display: block;
    margin-bottom: 5rpx;
  }
- .education {
+ .education,.work,.project {
    border-bottom: dashed 1rpx #999;
    padding: 15rpx 0rpx;
  }
- .education:last-of-type {
+ .education:last-of-type,.work:last-of-type,.project:last-of-type {
    border-bottom: none;
  }
- .school {
+ .school,.company {
    font-size: 16px;
  }
  .icon-school {
@@ -174,4 +174,10 @@
    width: 100%;
    text-align: center;
    font-size: 14px;
+   margin-top: 30rpx;
  }
+ .desc {
+   margin-top: 8rpx;
+   font-size: 13px;
+   color: #999;
+ } 

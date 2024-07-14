@@ -1,0 +1,8 @@
+<view class="pageContainer">
+<!-- <view class ='pageTitle'>优惠券列表</view> -->
+<view class='couponList' >
+<button class="btnItem" size='mini' type="primary" plain="true" wx:for="{{couponList}}" wx:key="value" bindtap="btnClick" data-value="{{item}}">
+{{item.value}}元</button>
+</view>
+</view>
+  

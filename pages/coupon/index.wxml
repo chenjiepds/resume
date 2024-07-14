@@ -1,0 +1,3 @@
+<!--pages/coupon/index.wxml-->
+
+<image class="imageIcon" src="{{couponImage}}"/>

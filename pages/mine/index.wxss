@@ -1,0 +1,15 @@
+/* pages/mine.wxss */
+.couponList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  /* justify-content: center; */
+}
+
+.btnItem {
+  flex:1;
+  min-width: 100px;
+  margin: 10px;
+  color: #ff7000 !important;
+  border-color: #ff7000 !important;
+}

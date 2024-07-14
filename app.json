@@ -1,12 +1,31 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/mine/index",
+    "pages/index/index",
+    "pages/coupon/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "MY RESUME",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#fa871e",
+    "list": [
+      {
+        "pagePath": "pages/mine/index",
+        "text": "首页",
+        "iconPath": "./assets/tab/publish.png",
+        "selectedIconPath": "./assets/tab/publish-selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "./assets/tab/mine.png",
+        "selectedIconPath": "./assets/tab/mine-selected.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
